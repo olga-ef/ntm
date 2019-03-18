@@ -1,0 +1,60 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  font-size: 14px;
+  line-height: 1.444;
+  font-family: $base-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $title-color;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  @include wrapper();
+}
+
+.inner-page {
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: $break_sm) {
+  .inner-page {
+    padding-bottom: 50px;
+  }
+}
+

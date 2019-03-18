@@ -1,0 +1,54 @@
+{
+  "name": "NTM-stroy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "7.3.4",
+    "@babel/preset-env": "7.3.4",
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "6.7.x",
+    "browser-sync": "2.18.12",
+    "css-mqpacker": "^6.0.1",
+    "del": "^3.0.0",
+    "gulp": "3.9.1",
+    "gulp-better-rollup": "^3.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svgo": "^1.1.1",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^3.0.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "9.2.1",
+    "rollup-plugin-node-resolve": "4.0.1",
+    "run-sequence": "^1.2.2",
+    "smart-grid": "^2.1.2"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg"
+  ],
+  "engines": {
+    "node": "6.10"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "jquery": "^3.3.1",
+    "svg4everybody": "^2.1.9"
+  }
+}

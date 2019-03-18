@@ -1,0 +1,19 @@
+@import "normalize.scss";
+@import "mixins.scss";
+@import "variables.scss";
+
+@import "global/smart-grid.scss";
+@import "global/fonts.scss";
+@import "global/global-styles.scss";
+
+@import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/btn.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/product.scss";
+@import "blocks/product-table.scss";
+@import "blocks/contact-form.scss";
+@import "blocks/field.scss";
+@import "blocks/privacy.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";

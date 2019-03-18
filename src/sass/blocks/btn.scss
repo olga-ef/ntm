@@ -1,0 +1,35 @@
+.btn {
+	display: block;
+	font-family: $base-font;
+	cursor: pointer;
+	padding: 10px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 2;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: $orange;
+	color: #fff;
+	border:none;
+
+	&:hover,
+	&:focus {
+		background-color: $orange-dark;
+	}
+
+
+	&--empty {
+		border: 1px solid $orange;
+		background-color: transparent;
+		color: $orange;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			border-color: $orange-dark;
+		}
+	}
+}
+
+

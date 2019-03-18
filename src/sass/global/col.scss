@@ -1,0 +1,56 @@
+.col-right {
+  text-align: left;
+}
+
+.col-left {
+  text-align: right;
+}
+
+.col {
+  @include col();
+  @include size(12);
+}
+
+.col-2 {
+  @include col();
+  @include size(6);
+  @include size-md(12);
+}
+
+.col-4 {
+  @include col();
+  @include size(4);
+  @include size-md(12);
+}
+
+.col-8 {
+  @include col();
+  @include size(8);
+  @include size-md(12);
+}
+
+.col-second {
+  order: 2;
+  @include md("order", 0);
+}
+
+.col-2 img,
+.col-4 img {
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper {
+  @include wrapper();
+}
+
+.row {
+ @include row-flex();
+ padding-top: 30px;
+ padding-bottom: 30px;
+ @include md(padding, 10px 0)
+}
+
+.align-center {
+  align-items: center; 
+}
