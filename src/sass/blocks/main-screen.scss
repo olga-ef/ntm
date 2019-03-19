@@ -1,0 +1,30 @@
+.main-screen {
+	position: relative;
+	width: 100%;
+}
+
+.main-screen__slide-title {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.main-screen__slide-subtitle {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.444;
+}
+
+.main-screen__slide__text {
+	width: calc(50% - 30px);
+}
+
+.main-screen__slide {
+	background-repeat: no-repeat;
+	background-position: cener;
+}
+
+.main-screen__slide#slide-1 {
+	background-image: url("../img/slider.jpg");
+}

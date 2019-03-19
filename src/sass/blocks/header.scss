@@ -1,11 +1,13 @@
 .header {
-	padding: 20px 0;
 	position: relative;
 }
 
-.header__wrapper {
+.header__content{
+	padding-top: 20px;
+	padding-bottom: 20px;
 	display: flex;
 	align-items: center;
+	border-bottom: 1px solid #d8d8d8;
 }
 
 .header__logo {
@@ -73,8 +75,6 @@
   color: $orange;
   line-height: 1;
   text-decoration: none;
-
-
 } 
 
 .header__callback {
