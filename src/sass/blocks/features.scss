@@ -1,0 +1,68 @@
+.features {
+	padding: 70px 0 0;
+}
+
+.features__list {
+	@include row-flex();
+	justify-content: center;
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.features__item {
+	position: relative;
+	@include col();
+	@include size(3);
+	@include size-md(5);
+	@include size-xs(12);
+	margin-bottom: 30px;
+	padding: 0px 15px;
+	color: #fff;
+	cursor: pointer;
+
+	&:nth-child(odd) {
+		background-color: $orange;
+	}
+
+	&:nth-child(even) {
+		background-color: $dark-brown;
+	}
+}
+
+.features__item-title {
+	margin: 0 auto;
+	width: 130px;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+}
+
+.features__text {
+	padding: 0 40px;
+	font-size: 14px;
+	color: #fff;
+	display: none;
+}
+
+.features__content {
+	padding: 70px 0;
+}
+
+.features__item:hover {
+
+	.features__text {
+		display: block;
+	} 
+
+	.features__content {
+		display: none;
+	}
+}
+
+@media screen and (max-width: $break_sm) {
+	.features {
+		padding-top: 40px;
+	}
+}

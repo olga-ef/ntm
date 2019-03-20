@@ -2,7 +2,7 @@
 	position: relative;
 }
 
-.header__content{
+.header__content {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
@@ -159,7 +159,7 @@
 }
 
 @media screen and (max-width: $break_sm) {
-	.header {
+	.header__content {
 		padding: 10px 0 20px;
 	}
 	.header-logo {

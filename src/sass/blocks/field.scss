@@ -1,4 +1,9 @@
-.field__text {
+.field {
+	width: 100%;
+}
+
+.field__text,
+.field__textarea {
 	display: block;
 	width: 100%;
 	min-height: 46px;
@@ -9,6 +14,22 @@
   font-size: 14px;
   line-height: 1;
   color: #888;
+  resize: none;
 }
+
+.field__select {
+	display: block;
+	width: 100%;
+	padding: 12px 20px;
+	min-height: 46px;
+	padding: 12px 20px;
+	background-color: #fff;
+  border: 1px solid #e3e3e3;
+  font-family: $base-font;
+  font-size: 14px;
+  line-height: 1;
+  color: #2c2c2c;
+}
+
 
 

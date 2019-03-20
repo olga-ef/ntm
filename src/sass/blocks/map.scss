@@ -1,0 +1,43 @@
+.map {
+	position: relative;
+	overflow: hidden;
+
+	.wrapper {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.map__wrap {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 60px;
+	transform: translateX(-50%);
+	background-image: url("../img/map");
+	z-index: -1;
+
+	img {
+		max-width: none;
+	}
+}
+
+.map__form {
+	width: 439px;
+	padding: 50px;
+	background-image: url("../img/modal-form-bg-2.png");
+	background-repeat: no-repeat;
+}
+
+.map__form-title {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 35px;
+	font-size: 22px;
+	color: #fff;
+}
+
+.map__form-btn {
+	width: 100%;
+	margin-top: 10px;  
+}

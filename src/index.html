@@ -59,12 +59,24 @@
 	<main class="inner-page">
 		<!-- main-screen -->
 		<section class="main-screen">
-			<div class="main-screen__slider" id="mainSlider">
-				<div class="main-screen__slide" id="slide-1">
-					<div class="wrapper">
-						<div class="main-screen__slide__text">
-							<h2 class="main-screen__slide-title">Поставка песка и щебня по Москве и Московской области</h2>
-							<p class="main-screen__slide-subtitle">Кроме этого мы готовы осуществить доставку песка и щебня по Центральному Федеральному Округу в такие области</p>
+			<!-- slider -->
+			<div class="main-screen__slider-wrap">
+				<div class="main-screen__slider" id="mainSlider">
+					<div class="main-screen__slide">
+						<div class="wrapper">
+							<div class="main-screen__slide-text">
+								<h2 class="main-screen__slide-title">Поставка песка и щебня по Москве и Московской области</h2>
+								<p class="main-screen__slide-subtitle">Кроме этого мы готовы осуществить доставку песка и щебня по&nbsp;Центральному Федеральному Округу в такие области</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="main-screen__slide">
+						<div class="wrapper">
+							<div class="main-screen__slide-text">
+								<h2 class="main-screen__slide-title">Поставка песка и щебня по Москве и Московской области</h2>
+								<p class="main-screen__slide-subtitle">Кроме этого мы готовы осуществить доставку песка и щебня по&nbsp;Центральному Федеральному Округу в такие области</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -99,12 +111,12 @@
 						</div>
 						<div class="form__row">
 							<div class="field">
-								<input type="tel" name="name" class="field__text" placeholder="Ваше имя"/>
+								<input type="text" name="name" class="field__text" placeholder="Ваше имя"/>
 							</div>
 						</div>
 						<div class="form__row">
 							<div class="form__field field form__field--half">
-								<input type="text" class="field__text" name="phone" placeholder="Телефон">
+								<input type="tel" class="field__text" name="phone" placeholder="Телефон">
 							</div>
 							<div class="form__field field form__field--half">
 								<input type="email" class="field__text" name="email" placeholder="E-mail">
@@ -112,67 +124,338 @@
 						</div>
 						<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
 						<button class="btn calc-form__btn" type="button">Расчитать доставку</button> 
-					</form>
-				</div>
-			</section>
+					</div>
+				</form>
+			</div>
+		</section>
 
-		</main>
-		<footer class="footer">
+		<section class="features">
 			<div class="wrapper">
-				<div class="footer__top">
-					<div class="footer__logo">
-						<img src="img/logo.svg" alt="HTM-строй">
-					</div>
-					<nav class="footer__nav">
-						<ul class="footer__nav-list">
-							<li class="footer__nav-item"><a href="#">О нас</a></li>
-							<li class="footer__nav-item"><a href="#">Продукция</a></li>
-							<li class="footer__nav-item"><a href="#">Услуги</a></li>
-							<li class="footer__nav-item"><a href="#">Контакты</a></li>
-						</ul>
-					</nav>
-					<div class="footer__info">
-						<p class="footer__contacts">
-							<a href="tel:+74959607624" class="footer__phone">+7&nbsp;495&nbsp;960&nbsp;76&nbsp;94</a>
-							<a href="mailto:mail@ntmstroy.pro" class="footer__email">mail@ntmstroy.pro</a>
+				<h3 class="title">Выбирайте НТМ-строй</h3>
+				<ul class="features__list">
+					<li class="features__item">
+						<div class="features__content">
+							<span class="features__icon features__icon--supply"></span>
+							<h4 class="features__item-title">Проверенные поставщики</h4>
+						</div>
+						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
 						</p>
-						<p class="footer__address">123308&nbsp;Москва, 3-й Силикатный проезд, д.4&nbsp;корп.1</p>
+					</li>
+					<li class="features__item">
+						<div class="features__content">
+							<span class="features__icon features__icon--time"></span>
+							<h4 class="features__item-title">Соблюдение сроков</h4>
+						</div>
+						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+						</p>
+					</li>
+					<li class="features__item">
+						<div class="features__content">
+							<span class="features__icon features__icon-park"></span>
+							<h4 class="features__item-title">Парк автотехники</h4>
+						</div>
+						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+						</p>
+					</li>
+					<li class="features__item">
+						<div class="features__content">
+							<span class="features__icon features__icon--clients"></span>
+							<h4 class="features__item-title">Парк автотехники</h4>
+						</div>
+						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- products -->
+		<section class="products">
+			<div class="wrapper">
+				<h3 class="title">Наша продукция</h3>
+				<ul class="products__list">
+					<li class="products__item">
+						<div class="products__img">
+							<img src="img/products.png" alt="">
+						</div>
+						<a href="#" class="products__link">
+							<h4 class="products__title">Щебень известняковый</h4>
+						</a>
+					</li>
+					<li class="products__item">
+						<div class="products__img">
+							<img src="img/products.png" alt="">
+						</div>
+						<a href="#" class="products__link">
+							<h4 class="products__title">Песок</h4>
+						</a>
+					</li>
+					<li class="products__item">
+						<div class="products__img">
+							<img src="img/products.png" alt="">
+						</div>
+						<a href="#" class="products__link">
+							<h4 class="products__title">Песочно-щебеночная смесь</h4>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- offer -->
+		<section class="offer">
+			<div class="wrapper">
+				<div class="offer__content">
+					<div class="offer__text">
+						<h3 class="title">Что мы предлагаем</h3>
+						<p class="offer__subtitle">Доставка песка, щебня и ЩПС по Москве и&nbsp;Московской области</p>
+						<p>Наша компания предлагает Вам высококачественный песок из ведущих карьеров Московской области. Прямые поставки песка, щебня и щебеночно- песчанной смеси (ЩПС) при помощи большого парка автомобильной техники. Доставка песка и щебня осуществляется при помощи тонаров и самосвалов
+							в максимально краткие сроки. При этом ценовая политика компании ориентирована на клиента.
+						</p>
+						<p class="offer__strong">Мы предлагаем вам заказать песок следующих марок:</p>
 					</div>
-				</div>
-				<div class="footer__bottom">
-					<p class="footer__copyright"><span>&copy;2019&nbsp;</span>| Все права защищены</p>
-					<p class="footer__design">Дизайн сайта &mdash; <a href="#">R.&nbsp;Morozov</a></p>
+					<div class="offer__desc">
+						<ul class="offer__list">
+							<li class="offer__item">
+								<h4 class="offer__title">Пескогрунт</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Строительный песок</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Песок намывной</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Песок мытый</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Фильтрационный песок</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Карьерный песок</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Сухоройный песок</h4>
+							</li>
+							<li class="offer__item">
+								<h4 class="offer__title">Песок КФ1, КФ2, КФ3</h4>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</footer>
+		</section>
 
-		<!--order-modal-->
-		<div class="modal" id="callbackModal">
-			<div class="modal__overlay">
-				<form action="#" class="modal__form">
-					<button class="modal__close" type="button">
-						<span></span>
-						<span></span>
-					</button>
-					<h3 class="modal__title">Закажите бесплатный звонок</h3>
-					<div class="modal__form-body">
-						<div class="modal__form-fields">
-							<div class="field modal__form-field">
-								<input type="text" class="field__text" name="name" placeholder="Ваше имя">
+		<!-- contact-form -->
+		<section class="contact-form">
+			<div class="wrapper">
+				<form action="#" class="contact-form__form">
+					<div class="contact-form__head">
+						<h2 class="contact-form__title">Возникли вопросы?</h2>
+						<p class="contact-form__text">Оставьте заявку, мы&nbsp;перезвоним Вам в&nbsp;ближайшее время и&nbsp;ответим на&nbsp;все интересующие вопросы.</p>
+					</div>
+					<div class="contact-form__body">
+						<div class="contact-form__fields">
+							<div class="field contact-form__field">
+								<input type="text" class="field__text" name="name" placeholder="Ваше имя" required>
 							</div>
-							<div class="field modal__form-field">
-								<input type="tel" class="field__text" name="phone" placeholder="Номер телефона">
+							<div class="field contact-form__field">
+								<input type="tel" class="field__text" name="phone" placeholder="Номер телефона" required>
 							</div>
 						</div>
 						<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
 					</div>
-					<div class="modal__form-bottom">
-						<button class="btn modal__form-btn">Оставить заявку</button>
+					<div class="contact-form__bottom">
+						<button class="btn contact-form__btn">Оставить заявку</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- clients -->
+		<section class="clients">
+			<div class="wrapper">
+				<h3 class="title">Наши клиенты</h3>
+				<ul class="clients__list" id="clientsSlider">
+					<li class="clients__item"><img src="img/logo-5.png" alt=""></li>
+					<li class="clients__item"><img src="img/logo-4.png" alt=""></li>
+					<li class="clients__item"><img src="img/logo-3.png" alt=""></li>
+					<li class="clients__item"><img src="img/logo-2.png" alt=""></li>
+					<li class="clients__item"><img src="img/logo.png" alt=""></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- recomend -->
+		<section class="recomend">
+			<div class="wrapper">
+				<h2 class="recomend__title">Нас рекомендуют</h2>
+				<div class="recomend__slider-wrapper">
+					<div class="recomend__slider" id="recomendSlider">
+						<div class="recomend__item">
+							<a class="recomend__link" href="./img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
+						<div class="recomend__item">
+							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
+						<div class="recomend__item">
+							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
+						<div class="recomend__item">
+							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
+						<div class="recomend__item">
+							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
+						<div class="recomend__item">
+							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
+						<div class="recomend__item">
+							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+						</div>
 					</div>
 				</div>
-			</form>
+			</div>
+		</section>
+
+		<!-- news -->
+		<section class="news">
+			<div class="wrapper">
+				<h3 class="title">Новости</h3>
+				<ul class="news__list" id="newsSlider">
+					<li class="news__item">
+						<div class="news__date">
+							<span>23</span>
+							мая
+						</div>
+						<a href="#" class="news__link"><h4 class="news__title">Официальный диллер карьера Аксиньино-1</h4></a>
+						<p class="news__preview">НТМ Строй заключила договор официального дилера карьера Аксиньино-1 (Бауинвест) в Московской области.</p>
+					</li>
+					<li class="news__item">
+						<div class="news__date">
+							<span>3</span>
+							сентября
+						</div>
+						<a href="#" class="news__link"><h4 class="news__title">Увеличение парка автотехники</h4></a>
+						<p class="news__preview">В связи с сезонной нагрузкой мы приняли решение увеличить наш парк автотехники на 3 самосвала и 2 тонара.</p>
+					</li>
+					<li class="news__item">
+						<div class="news__date">
+							<span>1</span>
+							декабря
+						</div>
+						<a href="#" class="news__link"><h4 class="news__title">Мы стали ближе</h4></a>
+
+						<p class="news__preview">Переехали в новый просторный офис недалеко от ТТК. Найти нас можно, заглянув на страничку контакты на нашем сайте.</p>
+					</li>
+					<li class="news__item">
+						<div class="news__date">
+							<span>1</span>
+							декабря
+						</div>
+						<a href="#" class="news__link"><h4 class="news__title">Мы стали ближе</h4></a>
+						<p class="news__preview">Переехали в новый просторный офис недалеко от ТТК. Найти нас можно, заглянув на страничку контакты на нашем сайте.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- contacts -->
+		<section class="map">
+			<div class="wrapper">
+				<h3 class="title">Контакты</h3>
+			</div>
+			<div class="map__wrap">
+				<img src="img/map.png" alt="">
+			</div>
+			<div class="map__form-wraper wrapper">
+				<form action="#" class="map__form form">
+					<h3 class="map__form-title">Свяжитесь с нами</h3>
+					<div class="form__body">
+						<div class="form__row">
+							<div class="field">
+								<input type="text" name="name" class="field__text" placeholder="Ваше имя">
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="field">
+								<input type="tel" name="phone" class="field__text" placeholder="Номер телефона"/>
+							</div>
+						</div>
+						<div class="form__row">
+							<div class="field">
+								<textarea name="message" id="" cols="30" rows="5" class="field__textarea" placeholder="Что вас интетесует?"></textarea>
+							</div>
+						</div>
+						<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
+						<button class="btn map__form-btn" type="button">Отправить</button> 
+					</div>
+				</form>
+			</div>
+
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="footer__top">
+				<div class="footer__logo">
+					<img src="img/logo.svg" alt="HTM-строй">
+				</div>
+				<nav class="footer__nav">
+					<ul class="footer__nav-list">
+						<li class="footer__nav-item"><a href="#">О нас</a></li>
+						<li class="footer__nav-item"><a href="#">Продукция</a></li>
+						<li class="footer__nav-item"><a href="#">Услуги</a></li>
+						<li class="footer__nav-item"><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="footer__info">
+					<p class="footer__contacts">
+						<a href="tel:+74959607624" class="footer__phone">+7&nbsp;495&nbsp;960&nbsp;76&nbsp;94</a>
+						<a href="mailto:mail@ntmstroy.pro" class="footer__email">mail@ntmstroy.pro</a>
+					</p>
+					<p class="footer__address">123308&nbsp;Москва, 3-й Силикатный проезд, д.4&nbsp;корп.1</p>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p class="footer__copyright"><span>&copy;2019&nbsp;</span>| Все права защищены</p>
+				<p class="footer__design">Дизайн сайта &mdash; <a href="#">R.&nbsp;Morozov</a></p>
+			</div>
 		</div>
+	</footer>
+
+	<!--order-modal-->
+	<div class="modal" id="callbackModal">
+		<div class="modal__overlay">
+			<form action="#" class="modal__form">
+				<button class="modal__close" type="button">
+					<span></span>
+					<span></span>
+				</button>
+				<h3 class="modal__title">Закажите бесплатный звонок</h3>
+				<div class="modal__form-body">
+					<div class="modal__form-fields">
+						<div class="field modal__form-field">
+							<input type="text" class="field__text" name="name" placeholder="Ваше имя">
+						</div>
+						<div class="field modal__form-field">
+							<input type="tel" class="field__text" name="phone" placeholder="Номер телефона">
+						</div>
+					</div>
+					<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
+				</div>
+				<div class="modal__form-bottom">
+					<button class="btn modal__form-btn">Оставить заявку</button>
+				</div>
+			</div>
+		</form>
 	</div>
-	<script src="js/main.js"></script>
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,33 +1,8 @@
 import { isEscPress } from './util';
 
-// const callbackModal = document.getElementById('callbackModal');
-// const callBackBtn = document.getElementById('callbackBtn');
-
-
-// function closeModal (e, modal) {
-// 	modal.classList.removeClass('is-open');
-// 	window.removeEventListener('kewdown', )
-// }
-
-// function onEscPress (e, modal) { 
-// 	if (isEscPress(e)) {
-
-// 	}
-
-// }
-
-// function openModal (e, modal) {
-// 	e.preventDefault();
-// 	modal.classLIst.add('is-open');
-// 	window.addEventListener('kewdown', onEscPress);
-// }
-
-// callbackBtn.addEventListener('click', (e) => openModal(e, callbackModal));
-
 class Modal {
 	constructor(myModal, openBtn) {
 		this.modal = myModal;
-		console.log(this.modal)
 		this.openBtn = openBtn;
 		this.bind();
 	}

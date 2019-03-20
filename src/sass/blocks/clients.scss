@@ -1,0 +1,42 @@
+.clients {
+	padding: 65px 0 70px;
+
+	.wrapper {
+		position: relative;
+	}
+}
+
+.clients__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.slick-track {
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+.clients__item {
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.client__slider-dots {
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media screen and (max-width: $break_sm) {
+	.clients {
+		padding-top: 50px;
+	}
+} 

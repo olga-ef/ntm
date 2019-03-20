@@ -1,0 +1,24 @@
+.recomend {
+	padding-bottom: 60px;
+}
+.recomnd__slider-wrapper {
+	position: relative;
+}
+
+.recomend__slider-dots {
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.recomend__item {
+	a {
+		display: block;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}

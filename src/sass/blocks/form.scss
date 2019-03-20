@@ -1,0 +1,36 @@
+.form__row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.form__field {
+	width: 100%;
+
+	&--half {
+		width: calc(50% - 10px);
+	}
+}
+
+@media screen and (max-width: $break_sm) {
+	.map__wrap {
+		position: static;
+		height: 350px;
+		transform: translateX(0%);
+		overflow: hidden;
+	}
+
+	.map__form {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.map__form-title {
+		font-size: 20px;
+	}
+
+	.map__form-wraper {
+		padding: 0;
+	}
+}

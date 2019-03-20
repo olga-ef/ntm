@@ -1,0 +1,53 @@
+.slider-dots {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.slider-dots li {
+	margin-right: 10px;
+	margin-bottom: 0;
+	padding: 0;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&::before {
+		display: none;
+	}
+}
+
+.slider-dots button {
+	display: block;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	background-color: transparent;
+	font-size: 0;
+	cursor: pointer;
+
+	&:hover,
+	&:active {
+		background-color: #fff;
+	}
+}
+
+.slider-dots li.slick-active button {
+	background-color: #fff;
+}
+
+.slider-dots--orange {
+	button {
+		border: 1px solid #666;
+	}
+
+	li.slick-active button {
+		border: none;
+		background-color: $orange-dark;
+	}
+}
+
