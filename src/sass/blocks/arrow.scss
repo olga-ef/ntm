@@ -1,0 +1,58 @@
+.arrow__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  stroke-linecap:round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill: none;
+  transform: translate(-50%, -50%);
+}
+
+.arrow {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+
+	&--white {
+		border: 1px solid #fff;
+
+		.arrow__icon {
+			stroke: #fff;
+		}
+	}
+
+	&--dark {
+		border: 1px solid $dark-brown;
+
+		.arrow__icon {
+			stroke: $dark-brown;
+		}
+	}
+
+	&--white:hover,
+	&--white:focus {
+		background: #fff;
+		outline: none;
+
+		.arrow__icon {
+			stroke: $dark-brown;
+		}
+	}
+
+	&--dark:hover,
+	 &--dark:focus {
+		border: 1px solid $orange-dark;
+		outline: none;
+
+		.arrow__icon {
+			stroke: $orange-dark;
+		}
+	}
+
+}

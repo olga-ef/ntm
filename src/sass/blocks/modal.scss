@@ -5,10 +5,14 @@
 	top: 0;
 	left: 0;
 	display: none;
+	z-index: 1000;
 }
 
 .modal.is-open {
 	display: block;
+	animation-name: fade;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
 }
 
 .modal__overlay {
@@ -100,3 +104,14 @@
 	font-size: 20px;
 	margin-bottom: 25px;
 } 
+
+@keyframes fade {
+	from {
+		opacity: 0;
+		display: none;
+	}
+	to {
+		opacity: 1;
+		display: block;
+	}
+}

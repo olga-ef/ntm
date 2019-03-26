@@ -38,8 +38,8 @@ gulp.task(`scripts`, function() {
         })
       ]
     }, `iife`)).
-    // pipe(uglify()).
-    // pipe(concat('main.js')).
+    pipe(uglify()).
+    pipe(concat('main.js')).
     pipe(sourcemaps.write(``)).
     pipe(gulp.dest(`build/js/`));
 });
@@ -115,7 +115,7 @@ gulp.task("copy", function() {
     "src/fonts/**/*.{woff,woff2}",
     "src/img/**",
     "src/*.html",
-    "src/js/svg4everybody.js"
+    "src/js/svg4everybody.js",
   ], {
     base: "./src"
   })

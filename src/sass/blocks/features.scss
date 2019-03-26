@@ -18,16 +18,73 @@
 	@include size-md(5);
 	@include size-xs(12);
 	margin-bottom: 30px;
-	padding: 0px 15px;
+	padding-top: 10px;
 	color: #fff;
 	cursor: pointer;
+	overflow: hidden;
 
-	&:nth-child(odd) {
+	&:focus {
+		outline: none;
+	}
+	
+	&:nth-child(odd) .features__item-wrap {
 		background-color: $orange;
+
+		&::before {
+			background-color: $dark-brown;
+		}
 	}
 
-	&:nth-child(even) {
+	&:nth-child(even) .features__item-wrap {
 		background-color: $dark-brown;
+
+		&::before {
+			background-color: $orange;
+		}
+	}
+}
+
+.features__item-wrap {
+	position: relative;
+	margin-left: 10px;
+	background-image: url("../img/features/features-bg.png");
+	background-repeat: no-repeat;
+	min-height: 225px;
+	
+
+	&::before {
+		content: "";
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: -12px;
+		left: -12px;
+		border: 6px solid #fff;
+	}
+}
+
+.features__icon {
+	display: block;
+	width: 50px;
+	height: 60px;
+	margin: 0 auto 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&--supply {
+		background-image: url("../img/features/list.png");
+	}
+
+	&--time {
+		background-image: url("../img/features/clock.svg");
+	}
+
+	&--park {
+		background-image: url("../img/features/car.png");
+	} 
+
+	&--price {
+		background-image: url("../img/features/price.svg");
 	}
 }
 
@@ -40,29 +97,60 @@
 }
 
 .features__text {
-	padding: 0 40px;
+	padding: 20px 20px;
 	font-size: 14px;
 	color: #fff;
-	display: none;
+	position: absolute;
+	top: 100%;
+	left:0;
+	// opacity: 0;
+	transition: top 0.5s;
 }
 
 .features__content {
-	padding: 70px 0;
+	padding: 50px 0;
+	opacity: 1;
+	transition: opacity 0.5s;
 }
 
 .features__item:hover {
 
 	.features__text {
-		display: block;
+		opacity: 1;
+		top: 0;
 	} 
 
 	.features__content {
-		display: none;
+		opacity: 0;
 	}
 }
+
+
 
 @media screen and (max-width: $break_sm) {
 	.features {
 		padding-top: 40px;
 	}
+
+	.features__item {
+		padding-top: 10px;
+	}
+
+	.features__item-wrap {
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+}
+
+.Прямоугольник_7 {
+  border-width: 6px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgb(44, 44, 44);
+  position: absolute;
+  left: 17px;
+  top: 1028px;
+  width: 28px;
+  height: 28px;
+  z-index: 216;
 }

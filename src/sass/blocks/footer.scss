@@ -9,6 +9,11 @@
 .footer__logo {
 	width: 170px;
 	padding-right: 34px;
+
+	img {
+		display: block;
+		max-height: 60px;
+	}
 }
 
 .footer__contacts {

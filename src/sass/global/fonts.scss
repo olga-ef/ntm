@@ -3,7 +3,7 @@
 	src: url("../fonts/Roboto-Regular.woff") format("woff");
 	font-style: normal; 
 	font-weight: 400;
-	font-display: fallback;  
+	font-display: swap;  
 }
 
 @font-face {
@@ -11,7 +11,7 @@
 	src: url("../fonts/Roboto-Bold.woff") format("woff");
 	font-style: normal; 
 	font-weight: 600;
-	font-display: fallback; 
+	font-display: swap; 
 }
 
 @font-face {
@@ -19,5 +19,5 @@
 	src: url("../fonts/Roboto-Italic.woff") format("woff");
 	font-style: italic; 
 	font-weight: 400;
-	font-display: fallback; 
+	font-display: swap; 
 }

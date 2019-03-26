@@ -22,3 +22,18 @@
 		margin: 0 auto;
 	}
 }
+
+.recomend .arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	
+	&--left {
+		left: -80px;
+	}
+
+	&--right {
+		right: -80px;
+	}
+}
+

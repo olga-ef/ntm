@@ -1,4 +1,3 @@
-const BREAKPOINT = 991;
 const toggleBtn = document.querySelector('.header__nav-toggle');
 const nav = document.querySelector('.header__nav');
 const itemsDropdown = document.querySelectorAll('.main-nav__item.has-dropdown');
@@ -9,7 +8,7 @@ function toggleNav () {
 }
 
 function subnavToggle (e) {
-	if (document.documentElement.clientWidth > BREAKPOINT) return;
+	if (document.documentElement.clientWidth > 991 || e.target !== this.firstElementChild) return;
 
 	e.preventDefault();
 	if (this.classList.contains('is-active')) {
@@ -17,12 +16,11 @@ function subnavToggle (e) {
 	} else {
 		this.classList.add('is-active');
 	}
-	console.log(this)
 }
 
 export function addToggleNav () {
 	toggleBtn.addEventListener('click', toggleNav);
-	[...itemsDropdown].forEach((item) => {
+	[].forEach.call(itemsDropdown, (item) => {
 		item.addEventListener('click', subnavToggle);
 	});
 }

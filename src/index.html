@@ -6,6 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/style.min.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=75ae7491-0e52-4cbc-aebb-cdf701515a35&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/svg4everybody.js"></script>
+	<script>svg4everybody()</script>
 </head>
 <body>
 	<!--header-->
@@ -19,12 +22,12 @@
 					<p class="header__logo-text">Полный комплекс услуг по&nbsp;поставке песка, щебня и&nbsp;ЩПС</p>
 				</div>	
 
-				<button class="header__nav-toggle is-active" type="button">
+				<button class="header__nav-toggle" type="button">
 					<span></span>
 					<span></span>
 					<span></span>
 				</button>	
-				<nav class="header__nav is-active">
+				<nav class="header__nav">
 					<div class="header__menu-wrap">
 						<ul class="main-nav">
 							<li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
@@ -56,13 +59,14 @@
 	</header>
 	<!--header-end-->
 
-	<main class="inner-page">
+	<main>
 		<!-- main-screen -->
 		<section class="main-screen">
 			<!-- slider -->
 			<div class="main-screen__slider-wrap">
 				<div class="main-screen__slider" id="mainSlider">
-					<div class="main-screen__slide">
+
+					<div class="main-screen__slide main-screen__slide-0">
 						<div class="wrapper">
 							<div class="main-screen__slide-text">
 								<h2 class="main-screen__slide-title">Поставка песка и щебня по Москве и Московской области</h2>
@@ -71,7 +75,7 @@
 						</div>
 					</div>
 
-					<div class="main-screen__slide">
+					<div class="main-screen__slide main-screen__slide-1">
 						<div class="wrapper">
 							<div class="main-screen__slide-text">
 								<h2 class="main-screen__slide-title">Поставка песка и щебня по Москве и Московской области</h2>
@@ -80,6 +84,8 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="wrapper"><div class="main-screen__slider-arrows"></div></div>
 			</div>
 
 			<div class="main-screen__form-wrap wrapper">
@@ -87,9 +93,9 @@
 					<h3 class="calc-form__title">Рассчитайте стоимость доставки</h3>
 					<div class="form__body">
 						<div class="form__row">
-							<div class="form__field field">
+							<div class="form__field field field--select">
 								<select class="field__select" name="product" id="calcFormProduct">
-									<option value="placeholder" disabled>Что нужно поставить?</option>
+									<option disabled selected>Что нужно поставить?</option>
 									<option value="песок" class="field__option">Песок</option>
 									<option value="Щебень" class="field__option">Щебень</option>
 									<option value="Щебеночно-песочная смесь" class="field__option">Щебеночно-песочная смесь</option>
@@ -127,6 +133,8 @@
 					</div>
 				</form>
 			</div>
+			
+			
 		</section>
 
 		<section class="features">
@@ -134,40 +142,48 @@
 				<h3 class="title">Выбирайте НТМ-строй</h3>
 				<ul class="features__list">
 					<li class="features__item">
-						<div class="features__content">
-							<span class="features__icon features__icon--supply"></span>
-							<h4 class="features__item-title">Проверенные поставщики</h4>
+						<div class="features__item-wrap">
+							<div class="features__content">
+								<span class="features__icon features__icon--supply"></span>
+								<h4 class="features__item-title">Проверенные поставщики</h4>
+							</div>
+							<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+								к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+							</p>
 						</div>
-						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
-							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
-						</p>
 					</li>
 					<li class="features__item">
-						<div class="features__content">
-							<span class="features__icon features__icon--time"></span>
-							<h4 class="features__item-title">Соблюдение сроков</h4>
+						<div class="features__item-wrap">
+							<div class="features__content">
+								<span class="features__icon features__icon--time"></span>
+								<h4 class="features__item-title">Соблюдение сроков</h4>
+							</div>
+							<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+								к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+							</p>
 						</div>
-						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
-							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
-						</p>
 					</li>
 					<li class="features__item">
-						<div class="features__content">
-							<span class="features__icon features__icon-park"></span>
-							<h4 class="features__item-title">Парк автотехники</h4>
+						<div class="features__item-wrap">
+							<div class="features__content">
+								<span class="features__icon features__icon--park"></span>
+								<h4 class="features__item-title">Парк автотехники</h4>
+							</div>
+							<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+								к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+							</p>
 						</div>
-						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
-							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
-						</p>
 					</li>
 					<li class="features__item">
-						<div class="features__content">
-							<span class="features__icon features__icon--clients"></span>
-							<h4 class="features__item-title">Парк автотехники</h4>
+						<div class="features__item-wrap">
+							<div class="features__content">
+								<span class="features__icon features__icon--price"></span>
+								<h4 class="features__item-title">Гибкие цены</h4>
+							</div>
+							<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
+								к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
+							</p>
 						</div>
-						<p class="features__text">Мы — клиентоориентированная компания. Нашей задачей является найти подход как
-							к частному заказчику, так и к крупному игроку на рынке строительства. Мы готовы индивидуально обсуждать скидки и условия с каждым клиентом.
-						</p>
 					</li>
 				</ul>
 			</div>
@@ -180,7 +196,7 @@
 				<ul class="products__list">
 					<li class="products__item">
 						<div class="products__img">
-							<img src="img/products.png" alt="">
+							<img src="img/prod-1.jpg" alt="">
 						</div>
 						<a href="#" class="products__link">
 							<h4 class="products__title">Щебень известняковый</h4>
@@ -188,7 +204,7 @@
 					</li>
 					<li class="products__item">
 						<div class="products__img">
-							<img src="img/products.png" alt="">
+							<img src="img/prod-2.jpg" alt="">
 						</div>
 						<a href="#" class="products__link">
 							<h4 class="products__title">Песок</h4>
@@ -196,7 +212,7 @@
 					</li>
 					<li class="products__item">
 						<div class="products__img">
-							<img src="img/products.png" alt="">
+							<img src="img/prod-3.jpg" alt="">
 						</div>
 						<a href="#" class="products__link">
 							<h4 class="products__title">Песочно-щебеночная смесь</h4>
@@ -286,6 +302,7 @@
 					<li class="clients__item"><img src="img/logo-3.png" alt=""></li>
 					<li class="clients__item"><img src="img/logo-2.png" alt=""></li>
 					<li class="clients__item"><img src="img/logo.png" alt=""></li>
+					<li class="clients__item"><img src="img/logo-6.jpg" alt=""></li>
 				</ul>
 			</div>
 		</section>
@@ -297,25 +314,25 @@
 				<div class="recomend__slider-wrapper">
 					<div class="recomend__slider" id="recomendSlider">
 						<div class="recomend__item">
-							<a class="recomend__link" href="./img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="./img/cert.png" data-lightbox="image-1"><img src="img/cert.png" alt=""></a>
 						</div>
 						<div class="recomend__item">
-							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="img/cert.png" data-lightbox="image-2"><img src="img/cert.png" alt=""></a>
 						</div>
 						<div class="recomend__item">
-							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="img/cert.png" data-lightbox="image-3"><img src="img/cert.png" alt=""></a>
 						</div>
 						<div class="recomend__item">
-							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="img/cert.png" data-lightbox="image-4"><img src="img/cert.png" alt=""></a>
 						</div>
 						<div class="recomend__item">
-							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="img/cert.png" data-lightbox="image-5"><img src="img/cert.png" alt=""></a>
 						</div>
 						<div class="recomend__item">
-							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="img/cert.png" data-lightbox="image-6"><img src="img/cert.png" alt=""></a>
 						</div>
 						<div class="recomend__item">
-							<a class="recomend__link" href="img/cert.png" data-lightbox="recomend"><img src="img/cert.png" alt=""></a>
+							<a class="recomend__link" href="img/cert.png" data-lightbox="image-7"><img src="img/cert.png" alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -369,8 +386,7 @@
 			<div class="wrapper">
 				<h3 class="title">Контакты</h3>
 			</div>
-			<div class="map__wrap">
-				<img src="img/map.png" alt="">
+			<div class="map__wrap" id="map">
 			</div>
 			<div class="map__form-wraper wrapper">
 				<form action="#" class="map__form form">
@@ -388,7 +404,7 @@
 						</div>
 						<div class="form__row">
 							<div class="field">
-								<textarea name="message" id="" cols="30" rows="5" class="field__textarea" placeholder="Что вас интетесует?"></textarea>
+								<textarea name="message" cols="30" rows="5" class="field__textarea" placeholder="Что вас интетесует?"></textarea>
 							</div>
 						</div>
 						<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
@@ -452,10 +468,9 @@
 				<div class="modal__form-bottom">
 					<button class="btn modal__form-btn">Оставить заявку</button>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
-</div>
-<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

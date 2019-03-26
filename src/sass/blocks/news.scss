@@ -14,7 +14,7 @@
 }
 
 .news__date {
-	diplay: flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	width: 100px;
@@ -64,6 +64,21 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+.news .arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	
+	&--left {
+		left: -80px;
+	}
+
+	&--right {
+		right: -80px;
+	}
+}
+
 
 @media screen and (max-width: $break_md) {
 	.news__item {

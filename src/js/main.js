@@ -1,153 +1,61 @@
 import { addToggleNav } from './nav-toggle';
 import Modal from './modal';
 import $ from 'jquery';
-import slick from './slick/slick.min.js';
+import './lightbox/lightbox.js';
+import {
+	mainSliderSettings,
+	featuresSettings,
+	clientsSliderSettings,
+	recomendSliderSettings,
+	newsSliderSettings
+} from './slider-settings';
+import { startSlider } from './slider'; 
 
 const callbackModal = document.querySelector('#callbackModal');
 const callbackBtn = document.querySelector('#callbackBtn');
+const mainSlider = document.querySelector('#mainSlider');
+const featuresSlider = document.querySelector('.features__list');
+const clientsSlider = document.querySelector('#clientsSlider');
+const recomendSlider = document.querySelector('#recomendSlider');
+const newsSlider = document.querySelector('#newsSlider');
 
+function init(){ 
+  // Создание карты.
+  const map = document.getElementById('map');
+  if (!map) return;  
+  var myMap = new ymaps.Map('map', {
+    center: [55.768512, 37.498591],
+    zoom: 16
+  });
 
+ 	var myPlacemark = new ymaps.Placemark([55.768512, 37.498591], {}, {
+	  iconLayout: 'default#image',
+    iconImageHref: 'img/placeholder.png',
+    iconImageSize: [50, 68],
+    iconImageOffset: [-25, -68]
+	});
 
-// главнй слайдер
-const mainSlider = $('#mainSlider');
-const mainSliderSettings = {
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	infinite: true,
-	appendArrows: $('.main-screen__slider-arrows'),
-	prevArrow: '<button class="arrow arrow--left">вперед</button>',
-	nextArrow: '<button class="arrow arrow--right">назад</button>',
-  // autoplay: true,
-  autoplaySpeed: 5000, //change speed 1s = 1000ms
-  zIndex: 0,
-  dots: true,
-  dotsClass: 'slider-dots main-screen__slider-dots',
-  lazyLoad: true
+  myMap.geoObjects.add(myPlacemark);
+  myMap.behaviors.disable('scrollZoom'); 
 }
 
-// преимущества
-const featuresSlider = $('.features__list');
-const featuresSettings = {
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	infinite: true,
-	arrows: false,
-	zIndex: 0,
-	dots: true,
-	dotsClass: 'slider-dots features__dots',
-	mobileFirst: true,
-	responsive: [
-	{
-		breakpoint: 561,
-		settings: 'unslick'
-	}
-	]
-}
-
-// клиенты
-const clientsSlider = $('#clientsSlider');
-const clientsSliderSettings = {
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	infinite: true,
-	arrows: false,
-	zIndex: 0,
-	dots: true,
-	dotsClass: 'client__slider-dots slider-dots slider-dots--orange',
-	mobileFirst: true,
-	responsive: [
-	{
-		breakpoint: 767,
-		settings: {
-			slidesToShow: 4,
-			slidesToScroll: 1,
-		}
-	},
-	{
-		breakpoint: 992,
-		settings: 'unslick'
-	}
-	]
-}
-
-// Сертификаты
-const recomendSlider = $('#recomendSlider');
-const recomendSliderSettings = {
-	slidesToShow: 6,
-	slidesToScroll: 6,
-	infinite: true,
-	arrows: false,
-	zIndex: 0,
-	dots: true,
-	dotsClass: 'recomend__slider-dots slider-dots slider-dots--orange',
-	responsive: [
-		{
-			breakpoint: 1100,
-			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 4,
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 1,
-			}
-		},
-		{
-			breakpoint: 560,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			}
-		}
-
-	]
-}
-
-// новости
-const newsSlider = $('#newsSlider');
-const newsSliderSettings = {
-	slidesToShow: 3,
-	slidesToScroll: 3,
-	infinite: true,
-	arrows: false,
-	zIndex: 0,
-	dots: true,
-	dotsClass: 'news__slider-dots slider-dots slider-dots--orange',
-	responsive: [
-		{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			}
-		},
-		{
-			breakpoint: 560,
-			settings: {
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			}
-		}
-
-	]
-}
-
-function startSlider(slider, settings, callback) {
-	if(!slider) return;
-	$(slider).slick(settings);
-
-	if (callback) {
-		callback();
-	} 
-}
-
-const myModal = new Modal(callbackModal, callbackBtn);
 addToggleNav();
 startSlider(mainSlider, mainSliderSettings);
-startSlider(featuresSlider, featuresSettings);
-startSlider(clientsSlider, clientsSliderSettings);
-startSlider(recomendSlider, recomendSliderSettings);
-startSlider(newsSlider, newsSliderSettings);
+
+$(document).ready(() => {
+	const myModal = new Modal(callbackModal, callbackBtn);
+	startSlider(featuresSlider, featuresSettings, 561);
+	startSlider(clientsSlider, clientsSliderSettings);
+	startSlider(recomendSlider, recomendSliderSettings);
+	startSlider(newsSlider, newsSliderSettings);
+	ymaps.ready(init);
+});
+
+
+const orderBtn = document.querySelector('#orderBtn');
+const orderForm = document.querySelector('#orderModal');
+
+
+if (orderForm && orderBtn) {
+	const orderModal = new Modal(orderForm, orderBtn);
+}

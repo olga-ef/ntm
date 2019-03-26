@@ -20,6 +20,11 @@
  	display: inline-block;
  	vertical-align: middle;
  	margin-right: 10px;
+
+ 	img {
+ 		display: block;
+ 		max-height: 60px;
+ 	}
 }
 
 .header__logo-text {
@@ -33,6 +38,8 @@
 
 .header__nav-toggle {
 	display: none;
+	position: relative;
+	z-index: 100;
 }
 
 .header__nav {
@@ -42,8 +49,6 @@
 }
 
 .header__menu-wrap {
-	// max-width: 420px;
-	// min-width: 350px;
 	flex-grow: 1;
 }
 
@@ -91,7 +96,7 @@
 	cursor: pointer;
 	padding: 0;
 	padding-top: 4px;
-	z-index: 100;
+	z-index: 1000;
 }
 
 .header__nav-toggle span {
@@ -136,7 +141,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		z-index: 10;
+		z-index: 100;
 	}
 
 	.header__logo {
@@ -181,7 +186,7 @@
 		background-color: rgba(44, 44, 44, 0.98);
 		position: absolute;
 		padding: 80px 55px 50px;
-		z-index: 10;
+		z-index: 20;
 	}
 
 	.header__nav.is-active {

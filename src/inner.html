@@ -6,6 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/style.min.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=75ae7491-0e52-4cbc-aebb-cdf701515a35&lang=ru_RU" type="text/javascript"></script>
+	<script src="js/svg4everybody.js"></script>
+	<script>svg4everybody()</script>
 </head>
 <body>
 	<!--header-->
@@ -19,12 +22,12 @@
 					<p class="header__logo-text">Полный комплекс услуг по&nbsp;поставке песка, щебня и&nbsp;ЩПС</p>
 				</div>	
 
-				<button class="header__nav-toggle is-active" type="button">
+				<button class="header__nav-toggle" type="button">
 					<span></span>
 					<span></span>
 					<span></span>
 				</button>	
-				<nav class="header__nav is-active">
+				<nav class="header__nav">
 					<div class="header__menu-wrap">
 						<ul class="main-nav">
 							<li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
@@ -263,12 +266,39 @@
 					<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
 				</div>
 				<div class="modal__form-bottom">
+					<button class="btn modal__form-btn" id="orderBtn">Оставить заявку</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+	<div class="modal" id="orderModal">
+		<div class="modal__overlay">
+			<form action="#" class="modal__form">
+				<button class="modal__close" type="button">
+					<span></span>
+					<span></span>
+				</button>
+				<h3 class="modal__title">Сделать заказ</h3>
+				<div class="modal__form-body">
+					<div class="modal__form-fields">
+						<div class="field modal__form-field">
+							<input type="text" class="field__text" name="name" placeholder="Ваше имя">
+						</div>
+						<div class="field modal__form-field">
+							<input type="tel" class="field__text" name="phone" placeholder="Номер телефона">
+						</div>
+					</div>
+					<p class="privacy">Нажимая на кнопку «Оставить заявку», я соглашаюсь с <a href="#">политикой конфиденциальности</a></p>
+				</div>
+				<div class="modal__form-bottom">
 					<button class="btn modal__form-btn">Оставить заявку</button>
 				</div>
-			</div>
-		</form>
+
+			</form>
+		</div>
 	</div>
-</div>
-<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

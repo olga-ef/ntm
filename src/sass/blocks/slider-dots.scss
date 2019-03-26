@@ -31,8 +31,10 @@
 	cursor: pointer;
 
 	&:hover,
-	&:active {
+	&:active,
+	&:focus {
 		background-color: #fff;
+		outline: none;
 	}
 }
 

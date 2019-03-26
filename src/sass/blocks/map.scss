@@ -1,10 +1,16 @@
 .map {
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 47px;
+	padding-top: 30px;
 
 	.wrapper {
 		position: relative;
 		z-index: 1;
+	}
+
+	.title {
+		margin-bottom: 100px;
 	}
 }
 
@@ -12,21 +18,28 @@
 	width: 100%;
 	position: absolute;
 	left: 50%;
-	top: 60px;
+	top: 90px;
 	transform: translateX(-50%);
-	background-image: url("../img/map");
 	z-index: -1;
-
-	img {
-		max-width: none;
-	}
+	height: 600px;
 }
 
 .map__form {
+	position: relative;
 	width: 439px;
 	padding: 50px;
-	background-image: url("../img/modal-form-bg-2.png");
+	background-image: url("../img/map-form-bg.png");
 	background-repeat: no-repeat;
+
+	&::before {
+		content: "";
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: -15px;
+		left: -10px;
+		background-color: $orange;
+	}
 }
 
 .map__form-title {
@@ -40,4 +53,46 @@
 .map__form-btn {
 	width: 100%;
 	margin-top: 10px;  
+}
+
+@media screen and (max-width: $break_md) {
+	.map {
+		.title {
+			margin-bottom: 30px;
+		}
+	}
+
+	.map__form {
+		background-position: left -50px top -50px;	
+
+		&::before {
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: -15px;
+			left: 0px;
+			border: 6px solid #fff;
+		}
+	}
+
+	.map__wrap {
+		position: static;
+		height: 350px;
+		transform: translateX(0%);
+		overflow: hidden;
+	}
+
+	.map__form {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.map__form-title {
+		font-size: 20px;
+	}
+
+	.map__form-wraper {
+		padding: 0;
+	}
 }
